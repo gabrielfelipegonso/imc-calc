@@ -7,7 +7,7 @@ export const WelcomeForm = ({func}) => {
     const handleName = (e)=> {
       let aux = e.target.value;
       const regex = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/;
-        if (regex.test(aux)) {
+        if (regex.test(aux)|| aux =="") {
       setUser(e.target.value);
     }
         
