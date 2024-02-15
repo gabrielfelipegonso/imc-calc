@@ -24,7 +24,7 @@ export const WelcomeForm = ({func}) => {
         <form className={classes.formulario} onSubmit={handleSubmit}>
            <h1 className={classes.titulo} >Calcule seu IMC</h1>
             {user != '' && <h2 className={classes.welcomeMsg}>Seja bem vindo {user}</h2>}
-               <input type="text" className={`${classes.inputText} ${warning? classes.warning : ''}`} name='name' placeholder='Seu nome' value={user || ''} onChange={handleName} />
+               <input type="text" className={`${classes.inputText} ${warning? classes.warning : ''}`} name='name' placeholder='Seu nome' value={user || ''} onChange={handleName} maxlength="100" />
                 
            <input className={classes.submit} type="submit" value="inicio"/>
         </form>

@@ -2,15 +2,45 @@
     background-color: #005A5B;
     color: rgb(24, 24, 24);
     width: 700px;
-    height: 450px;
+    min-height: 450px;
     border-radius: 2vw;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
     box-shadow: 0 0 8px 1px #000003, 8px 8px 16px 2px #000003;
     transition: box-shadow 0.3s;
+     flex-direction: column;
     
 }
 .body:hover {
   box-shadow: 0 0 16px 2px #000003, 16px 16px 32px 4px #000003;
+}
+
+@media only screen and (max-width: 450px){
+  .body{
+   
+    width: 400px;
+    min-height: 425px;
+ 
+}
+
+}
+@media only screen and (min-width: 451px) and (max-width: 650px) {
+.body{
+   
+    width: 430px;
+    min-height: 500px;
+ 
+}
+
+}
+@media only screen and (min-width: 651px) and (max-width: 750px) {
+.body{
+   
+    width: 600px;
+    min-height: 600px;
+ 
+}
+
 }

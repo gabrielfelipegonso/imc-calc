@@ -20,7 +20,8 @@ for (let i = 0; i <= 300; i++) {
 
 const[alt, setAlt] = useState(0);
 const[pes, setPes] = useState(0);
-const [warning, setWarning] = useState(false);
+const [warningPes, setWarningPes] = useState(false);
+const [warningAlt, setWarningAlt] = useState(false);
  const handleSubmit= (e)=> {
         e.preventDefault();
         console.log(alt);
@@ -29,8 +30,9 @@ const [warning, setWarning] = useState(false);
         func(alt, pes);
        
        }else{
-        setWarning(true);
-       }
+        alt == 0? setWarningAlt(true): setWarningAlt(false);
+        pes == 0? setWarningPes(true): setWarningPes(false);
+    }
        
         
     }
@@ -41,7 +43,7 @@ const [warning, setWarning] = useState(false);
     <form className={classes.formulario} onSubmit={handleSubmit}>
         <h1 className={classes.tituloImc} >{user}, por favor informe altura e peso.</h1>
         <div className={classes.imcContainer}>
-            <select name="altura" className={`${classes.select} ${warning? classes.warning : ''}`}  value = {alt || ''} onChange={(e)=> setAlt(e.target.value)} id="">
+            <select name="altura" className={`${classes.select} ${warningAlt? classes.warning : ''}`}  value = {alt || ''} onChange={(e)=> setAlt(e.target.value)} id="">
                 {
                     alturas.map( (alt, indice) => ( 
                         
@@ -56,7 +58,7 @@ const [warning, setWarning] = useState(false);
 
 
             </select>
-            <select name="peso" className={`${classes.select} ${warning? classes.warning : ''}`} value = {pes || ''} onChange={(e)=> setPes(e.target.value)} id="">
+            <select name="peso" className={`${classes.select} ${warningPes? classes.warning : ''}`} value = {pes || ''} onChange={(e)=> setPes(e.target.value)} id="">
                 {
                     pesos.map( (alt, indice) => ( 
                         
@@ -77,47 +79,7 @@ const [warning, setWarning] = useState(false);
     </form>
 </>
 
-//   <>  <h1 className={classes.titulo} >{user}, por favor informe altura e peso.</h1>
-//     <form className={classes.formulario} onSubmit={''}>
-           
-        
 
-
-       
-                   
-//                <select name="Altura" className={classes.select} value={pes || ''} onChange={(e)=> setPes(e.target.value)} id="">
-//                 {
-//                     alturas.map( (alt, indice) => ( 
-                        
-//                         <option value={alt} key={indice}>
-//                             {alt} Cm
-//                         </option>
-                      
-//                     )
-
-//                     )
-//                 }
-//                </select>
-//                </select>
-//                <select name="Peso" className={classes.select} value={pes || ''} onChange={(e)=> setPes(e.target.value)} id="">
-//                 {
-//                     pesos.map( (peso, indice) => ( 
-                        
-//                         <option value={peso} key={indice}>
-//                             {peso} Kg
-//                         </option>
-                      
-//                     )
-
-//                     )
-//                 }
-//                </select>
-
-          
-                
-//            <input className={classes.submit} type="submit" value="inicio"/>
-//         </form>
-//     </>
   )
 }
 
