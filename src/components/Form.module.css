@@ -1,0 +1,84 @@
+.inputText{
+    width: 550px;
+    height: 50px;
+
+    text-align: center;
+    display: block;
+} 
+.formulario{
+    display: flex;
+    padding: 0;
+    width: 700px;
+    height: 450px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: space-around;
+    padding: 10%;
+}
+.titulo{
+   
+    text-align: center;
+    color: #DEEFE7;
+    font-size: 70px;
+}
+.submit,
+.button{
+    height: 60px;
+    border-radius: 10px;
+    background-color: #009688;
+    color: rgb(250, 252, 253);
+    font-size: 20px ;
+    cursor: pointer;
+}
+.submit:hover,
+.button:hover{
+ 
+    background-color: #00E3CC;
+    color: rgb(255, 255, 255);
+   
+}
+.welcomeMsg,
+.tituloImc{
+    text-align: center;
+    font-size: 20px ;
+    color: aliceblue;
+}
+
+.select{
+    color: black;
+    height: 20px;
+    width: 400px;
+}
+.imcContainer{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.select{
+    width: 280px;
+    font-size: 20px;
+    height: 30px;
+   border: none;
+    appearance: none;
+     background-color: #009688;
+     background-image: url('../assets/img/list-icon.png');
+     background-size: 28px 28px;
+    background-position: right 10px top 50%;
+     background-repeat: no-repeat;
+}
+.warning{
+    border: inset red 2px;
+}
+.warning::placeholder{
+    color: red;
+    
+    font-size: 1.2rem;
+}
+.resultadoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
